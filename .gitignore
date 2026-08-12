@@ -1,0 +1,22 @@
+# Byte-compiled / optimized / DLL files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Environment and IDE files
+.venv/
+venv/
+ENV/
+env/
+.idea/
+.vscode/
+
+# Generated runtime outputs
+scored_customers.csv
+logs/
+
+# Ensure required artifacts and test data are tracked
+!app/model.pkl
+!app/transformer.pkl
+!test_data/all_customers.csv
+!test_data/sample_input.json
