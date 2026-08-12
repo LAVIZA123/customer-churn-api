@@ -1,5 +1,5 @@
-let API_BASE_URL = 'http://localhost:8000';
-let ACTIVE_API_URL = 'http://localhost:8000';
+let API_BASE_URL = 'https://customer-churn-api-9qu6.onrender.com';
+let ACTIVE_API_URL = 'https://customer-churn-api-9qu6.onrender.com';
 
 // Global session history
 let predictionHistory = JSON.parse(localStorage.getItem('churn_prediction_history') || '[]');
@@ -24,7 +24,7 @@ async function checkApiHealth() {
     const metricApiStatus = document.getElementById('metricApiStatus');
     const apiCardIcon = document.getElementById('apiCardIcon');
 
-    const hostsToTry = [ACTIVE_API_URL, 'http://localhost:8000', 'http://127.0.0.1:8000'];
+    const hostsToTry = [ACTIVE_API_URL, 'https://customer-churn-api-9qu6.onrender.com', 'http://localhost:8000', 'http://127.0.0.1:8000'];
     let isConnected = false;
 
     for (const baseUrl of hostsToTry) {
