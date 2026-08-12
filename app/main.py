@@ -81,5 +81,7 @@ def predict():
         return jsonify({"error": str(e)}), 500
 
 if __name__ == '__main__':
-    logger.info("Starting Flask API server on http://localhost:8000...")
-    app.run(host='0.0.0.0', port=8000, debug=False)
+    import os
+    port = int(os.environ.get('PORT', 8000))
+    logger.info(f"Starting Flask API server on port {port}...")
+    app.run(host='0.0.0.0', port=port, debug=False)
